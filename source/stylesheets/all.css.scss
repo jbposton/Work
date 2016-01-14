@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import "normalize";
+@import "bourbon/bourbon";
+@import "base/base";   /* Bitters needs to be imported before Neat */
+@import "neat/neat";
+
+body {
+  @include outer-container();
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+
+.portfolio{
+  @include span-columns(10);
+  @include shift (1);
+  height: 100px;
+}
+
+.intro{
+  @include span-columns(8 of 10);
+  padding: 40px 0 40px 0;
+}
+
+h1{
+ font-family: 'Libre Baskerville', serif;
+ font-size: 3em;
+ line-height: 1.5;
+}
+
+.cases{
+  @include span-columns(10 of 10);
+  margin-top: 100px;
+}
+
+
+.case{
+  @include span-columns(4 of 10);
+  @include shift (2);
+  height: 300px;
+  background-color: #F36C56;
+}
+
+.casetwo{
+  @include span-columns(4 of 10);
+  margin-top:150px;
+  height: 300px;
+  background-color: #446A8E;
+}
+
+
+
+
+//navigation
+
+nav{ 
+  padding:20px 0 20px 0;
+  h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 10px;
+
+  }
+
+  ul{
+    float: right;
+  }
+
+  li{
+    float: left;
+  }
+
+  a{
+    color: $dark-gray;
+    padding: 10px;
+    display: block;
+    font-weight: 500;
+  }
+
+}
