@@ -11,7 +11,7 @@ body {
 }
 
 
-.portfolio{
+.center{
   @include span-columns(10);
   @include shift (1);
   height: 100px;
@@ -25,9 +25,58 @@ body {
 h1{
  font-family: 'Libre Baskerville', serif;
  font-size: 3em;
- line-height: 1.5;
+ line-height: 1;
 }
 
+
+//article page
+
+p{ 
+ font-family: 'Libre Baskerville', serif;
+ font-size: 1.125em;
+ line-height: 1.5;
+ padding-bottom: 2em; 
+ @include span-columns(8 of 10);
+ @include shift(1);
+ @include omega();
+}
+
+
+.key-takeaways{
+  ul{
+    display: block;
+    padding-bottom: 3em;
+    @include span-columns(8 of 10);
+    @include shift(1);
+  }
+
+  lh{
+    font-family: 'libre Baskerville', serif;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.5;
+    border-right: 1px solid black;
+    text-align: center;
+    @include span-columns(2 of 8);
+    display: block;
+  }
+
+  li{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.125em;
+    line-height: 1.5;
+  }
+}
+
+.aside{
+  @include span-columns(12 of 12);
+  height: 5em;
+  background-color: $light-gray;
+}
+
+
+
+//homepage
 .cases{
   @include span-columns(10 of 10);
   margin-top: 100px;
