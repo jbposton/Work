@@ -5,8 +5,9 @@
 @import "neat/neat";
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1em;
+  background-color: #F9F9F9;
 }
 
 .content-grid{
@@ -14,29 +15,106 @@ body {
 }
 
 
-.center{
-  @include span-columns(10);
+//HOMEPAGE
+
+.portfolio{
+  @include span-columns(10 of 12);
   @include shift (1);
   @include omega();
 }
 
-.box{
-  width: 100%;
-  height: 200px;
-  background-color: red;
+
+.opener{
+  padding-top: 8em;
+  padding-bottom: 11em;
 }
 
-.intro{
-  @include span-columns(8 of 10);
-  padding: 40px 0 40px 0;
+span{
+    font-family: 'Merriweather', serif;
+    font-size: 4em;
+    line-height: 1.5;
+    font-weight: 500;
+
+  }
+
+span:hover{
+  border-bottom: 1px solid #27cae4;
+
 }
 
-h1{
- font-family: 'Libre Baskerville', serif;
- font-size: 3em;
- line-height: 1.5;
+.left-col{
+  @include span-columns (5 of 10)
 }
 
+.case-box{
+  background-color: white;
+  height: 500px;
+  margin-bottom: 2em;
+  padding: 50px 20px 20px 30px;
+  h2{
+    font-family: "Montserrat";
+    color: $light-gray;
+    font-size: .9em;
+    padding-bottom: .5em;
+  }
+  h1{
+    font-family: "Merriweather";
+    color: black;
+    font-size: 2em;
+    padding-bottom: 2em;
+    font-weight: 300;
+    line-height: 1.4;
+    }
+}
+
+.article-box{
+  background-color: white;
+  height: 225px;
+  margin-bottom: 4em;
+  position: relative;
+  padding: 30px 20px 20px 30px;
+  &:after{
+    content: '';
+    width:45%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left:0;
+    }
+  &:hover:before{
+    content: '';
+    width: 80%;
+    height: 225px;
+    background-color:none;
+    background-image: radial-gradient(black 10%, transparent 16%),
+    radial-gradient(black 10%, transparent 16%);
+    background-size:5px 5px;
+    background-position: 0 0, 30px 30px;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    z-index: -1;
+  }
+  h2{
+    font-family: "Roboto";
+    color: $light-gray;
+    font-size: .9em;
+    padding-bottom: .5em;
+  }
+  h1{
+    font-family: "Roboto";
+    color: black;
+    font-size: 1.9em;
+    padding-bottom: 2em;
+    font-weight: 500;
+    }
+  }
+
+.right-col{
+  @include span-columns (5 of 10);
+  padding-top: 10em;
+}
 
 //article page
 
@@ -86,25 +164,81 @@ p{
 
 
 //homepage
-.cases{
-  @include span-columns(10 of 10);
+.work-one{
+  @include span-columns (5 of 10);
+  margin-top: 100px;
+}
+.work-two{
+  @include span-columns (5 of 10);
   margin-top: 100px;
 }
 
 
-.case{
-  @include span-columns(4 of 10);
-  @include shift (2);
-  height: 300px;
-  background-color: #F36C56;
+.case-study{
+  @include span-columns(5 of 5);
+  height: 500px;
+  background-color: white;
+  padding: 30px;
+  h1{
+    font-family: "Merriweather";
+    font-size: 2.5em;
+    padding: .5em 0 0 0;
+    font-weight: 300;
+  }
+  h2{
+    font-family: "Montserrat";
+    font-size: .8em;
+    color: #E0E0E0;
+    padding-bottom: 0;
+  }
 }
 
-.casetwo{
-  @include span-columns(4 of 10);
-  margin-top:150px;
-  height: 300px;
-  background-color: #446A8E;
+.article{
+  @include span-columns(5 of 5);
+  height: 250px;
+  background-color: white;
+  padding: 30px 10px 0 30px;
+  border-top: .5em solid black; 
+  margin-top: 10em;
+  position: relative;
+  @include omega();
+
+  h1{
+    font-family: "Roboto";
+    font-size: 2em;
+    padding: .5em 0 0 0;
+    font-weight: 500;
+
+  }
+  h2{
+    font-family: "Montserrat";
+    font-size: .8em;
+    color: #E0E0E0;
+    padding-bottom: 0;
+  }
 }
+
+.dot{
+  position: absolute;
+  @include span-columns(5 of 5);
+  @include omega();
+  z-index: -1;
+  top: 10px;
+  left: 20px;
+  height: 250px;
+  background-color:none;
+  background-image: radial-gradient(black 15%, transparent 16%),
+  radial-gradient(black 15%, transparent 16%);
+  background-size:5px 5px;
+  background-position: 0 0, 30px 30px;
+  margin-bottom: 20px;
+
+}
+
+.second{
+  margin-top: 3em;
+}
+
 
 
 
@@ -112,29 +246,39 @@ p{
 //navigation
 
 nav{ 
-  padding:20px 0 20px 0;
+  padding:20px 0 0 0;
   h1{
+    @include span-columns(1);
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 1.2em;
     display: inline-block;
     padding: 10px;
+    float: left;
 
   }
 
   ul{
-    float: right;
+    @include span-columns(11);
+    @include omega();
+    padding: 0 0 5px 0;
+    margin: 0 0 0 0;
+    border-bottom: 1px solid #EAEAEA;
   }
 
   li{
     float: left;
+    padding: 12px 40px 0 0;
+    margin: 0 0 0 0;
   }
 
   a{
-    color: $dark-gray;
-    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 12px;
+    color: #C9C9C9;
+    font-weight: 700;
     display: block;
-    font-weight: 500;
   }
 
 }
