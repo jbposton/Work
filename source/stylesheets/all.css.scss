@@ -3,11 +3,22 @@
 @import "bourbon/bourbon";
 @import "base/base";   /* Bitters needs to be imported before Neat */
 @import "neat/neat";
+@import "components/navigation"; /*Navigation*/
+@import "components/footer";
+@import "templates/case"; /*Case Study*/
+
+
+
+//HOMEPAGE
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $base-font-family, serif;
   font-size: 1em;
   background-color: #F9F9F9;
+}
+
+h2{
+  font-family: $second-font-family, sans-serif;
 }
 
 .content-grid{
@@ -21,12 +32,17 @@ body {
   @include span-columns(10 of 12);
   @include shift (1);
   @include omega();
+  @include media($medium-screen-up) {
+    @include span-columns(6);
+    @include shift(1);
+    @include omega();
+  }
 }
 
 
 .opener{
-  padding-top: 8em;
-  padding-bottom: 11em;
+  padding-top: 5em;
+  padding-bottom: 8em;
 }
 
 span{
@@ -43,28 +59,52 @@ span:hover{
 }
 
 .left-col{
-  @include span-columns (5 of 10)
+  @include span-columns (5 of 10);
+   @include media($medium-screen-up) {
+    @include span-columns(6 of 6);
+    @include omega();
+  }
 }
 
 .case-box{
   background-color: white;
-  height: 500px;
+  height: 600px;
   margin-bottom: 2em;
-  padding: 50px 20px 20px 30px;
+  padding: 50px 30px 30px 0px;
+  overflow: hidden;
+  transition: box-shadow 1s;
+  position: relative;
+  //border: 1px #EEEEEE solid;
+  &:hover{
+    -webkit-box-shadow: 6px 6px 24px -6px rgba(179,179,179,0.38);
+    -moz-box-shadow: 6px 6px 24px -6px rgba(179,179,179,0.38);
+    box-shadow: 6px 6px 24px -6px rgba(179,179,179,0.38);
+    //h1{
+    // text-decoration: underline;
+   // }
+  }
   h2{
-    font-family: "Montserrat";
-    color: $light-gray;
+    font-family: $second-font-family;
+    color: $dark-gray;
     font-size: .9em;
     padding-bottom: .5em;
+    padding-left: 30px;
+    transition: text-decoration 1s;
   }
   h1{
-    font-family: "Merriweather";
-    color: black;
-    font-size: 2em;
+    font-family: $base-font-family;
+    color: $black;
+    font-size: 2.2em;
     padding-bottom: 2em;
     font-weight: 300;
+    padding-left: 30px;
     line-height: 1.4;
     }
+  img{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+  }
 }
 
 .article-box{
@@ -82,203 +122,42 @@ span:hover{
     top: 0;
     left:0;
     }
-  &:hover:before{
+  &:before{
     content: '';
-    width: 80%;
+    width: 90%;
     height: 225px;
     background-color:none;
-    background-image: radial-gradient(black 10%, transparent 16%),
-    radial-gradient(black 10%, transparent 16%);
-    background-size:5px 5px;
-    background-position: 0 0, 30px 30px;
+    background-image: url("/images/dots.png");
     position: absolute;
     right: -20px;
-    top: 20px;
+    top: 25px;
     z-index: -1;
   }
   h2{
-    font-family: "Roboto";
-    color: $light-gray;
+    font-family: $second-font-family;
+    color: $dark-gray;
     font-size: .9em;
     padding-bottom: .5em;
   }
   h1{
-    font-family: "Roboto";
-    color: black;
+    font-family: $second-font-family;
+    color: $black;
     font-size: 1.9em;
     padding-bottom: 2em;
-    font-weight: 500;
+    font-weight: 700;
     }
   }
 
 .right-col{
   @include span-columns (5 of 10);
   padding-top: 10em;
-}
-
-//article page
-
-p{ 
- font-family: 'Libre Baskerville', serif;
- font-size: 1.125em;
- line-height: 1.5;
- padding-bottom: 2em; 
- @include span-columns(8 of 10);
- @include shift(1);
- @include omega();
-}
-
-
-.key-takeaways{
-  ul{
-    display: block;
-    padding-bottom: 3em;
-    @include span-columns(8 of 10);
-    @include shift(1);
-  }
-
-  lh{
-    font-family: 'libre Baskerville', serif;
-    font-size: 4em;
-    font-weight: 700;
-    line-height: 1.5;
-    border-right: 1px solid black;
-    text-align: center;
-    @include span-columns(2 of 8);
-    display: block;
-  }
-
-  li{
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.125em;
-    line-height: 1.5;
-  }
-}
-
-.aside{
-  @include span-columns(12 of 12);
-  height: 5em;
-  background-color: $light-gray;
-}
-
-
-
-//homepage
-.work-one{
-  @include span-columns (5 of 10);
-  margin-top: 100px;
-}
-.work-two{
-  @include span-columns (5 of 10);
-  margin-top: 100px;
-}
-
-
-.case-study{
-  @include span-columns(5 of 5);
-  height: 500px;
-  background-color: white;
-  padding: 30px;
-  h1{
-    font-family: "Merriweather";
-    font-size: 2.5em;
-    padding: .5em 0 0 0;
-    font-weight: 300;
-  }
-  h2{
-    font-family: "Montserrat";
-    font-size: .8em;
-    color: #E0E0E0;
-    padding-bottom: 0;
-  }
-}
-
-.article{
-  @include span-columns(5 of 5);
-  height: 250px;
-  background-color: white;
-  padding: 30px 10px 0 30px;
-  border-top: .5em solid black; 
-  margin-top: 10em;
-  position: relative;
-  @include omega();
-
-  h1{
-    font-family: "Roboto";
-    font-size: 2em;
-    padding: .5em 0 0 0;
-    font-weight: 500;
-
-  }
-  h2{
-    font-family: "Montserrat";
-    font-size: .8em;
-    color: #E0E0E0;
-    padding-bottom: 0;
-  }
-}
-
-.dot{
-  position: absolute;
-  @include span-columns(5 of 5);
-  @include omega();
-  z-index: -1;
-  top: 10px;
-  left: 20px;
-  height: 250px;
-  background-color:none;
-  background-image: radial-gradient(black 15%, transparent 16%),
-  radial-gradient(black 15%, transparent 16%);
-  background-size:5px 5px;
-  background-position: 0 0, 30px 30px;
-  margin-bottom: 20px;
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 6);
+    @include omega();}
 
 }
 
-.second{
-  margin-top: 3em;
-}
 
 
 
 
-
-//navigation
-
-nav{ 
-  padding:20px 0 0 0;
-  h1{
-    @include span-columns(1);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 1.2em;
-    display: inline-block;
-    padding: 10px;
-    float: left;
-
-  }
-
-  ul{
-    @include span-columns(11);
-    @include omega();
-    padding: 0 0 5px 0;
-    margin: 0 0 0 0;
-    border-bottom: 1px solid #EAEAEA;
-  }
-
-  li{
-    float: left;
-    padding: 12px 40px 0 0;
-    margin: 0 0 0 0;
-  }
-
-  a{
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    font-size: 12px;
-    color: #C9C9C9;
-    font-weight: 700;
-    display: block;
-  }
-
-}

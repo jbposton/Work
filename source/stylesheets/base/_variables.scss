@@ -1,5 +1,6 @@
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: 'merriweather';
+$second-font-family: 'Montserrat';
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -17,12 +18,13 @@ $base-z-index: 0;
 
 // Colors
 $blue: #477dca;
-$dark-gray: #333;
+$dark-gray: #E0E0E0;
 $medium-gray: #999;
 $light-gray: #ddd;
+$black: #36373B;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $black;
 $action-color: $blue;
 
 // Border
