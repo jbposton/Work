@@ -89,6 +89,10 @@ body{
 
 }
 
+#outputs{
+	padding-left: 91px;
+}
+
 .aside{
 	@include span-columns(2 of 12);
 	@include shift(1);
