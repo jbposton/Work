@@ -141,11 +141,24 @@ body{
 	@include shift (1);
 }
 
-.project{
-	@include span-columns (12);
-	height: 1000px;
+.process{
+	@include span-columns (8 of 12);
+	@include shift(2);
+	margin-top: 11em;
+	h1{
+		text-align: center;
+		margin-bottom: $vertical-space;
+		font-weight: 700;
+	}
 }
 
+
+
+
+
+
+
+//PLACEHOLDER
 .placeholder{
 	text-align: center;
 	background-color: #EFEFEF;
