@@ -17,6 +17,14 @@ body {
   background-color: #F9F9F9;
 }
 
+p { 
+    font-family: "merriweather";
+    font-size: 1.25em; //20pt
+    font-weight: 200;
+    line-height: 1.75;
+    margin-bottom: $vertical-space-1;
+}
+
 h2{
   font-family: $second-font-family, sans-serif;
 }
@@ -49,7 +57,7 @@ span{
     font-family: 'Merriweather', serif;
     font-size: 4em;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 300;
 
   }
 

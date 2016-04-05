@@ -1,63 +1,35 @@
 //Rules
-$vertical-space: 2.7em; //30px - margin-bottom 
-$double-vertical-space: 5em;
+$vertical-space-1: 2.5em; //30px 
+$vertical-space-2: 5em; //80px 
+$vertical-space-3: 10em; // 160px
 
 //-----------
 
-body{
-	background-color: white;
-}
+.case-study{
+	@include span-columns(12);
+	background-color: #F9F9F9;
 
-.title{
-	@include span-columns(6 of 12);
-	@include shift(3);
-	@include omega();
-	padding-top: 10em;
-	margin-bottom: $vertical-space;
-	header{
+	h1{
 		font-family: "merriweather";
 		font-size: 3.125em; //50pt
 		line-height: 1.2;
 		font-weight: 300;
 		margin-bottom: 15px;
-	}
-	h3{
-		font-family: "montserrat";
-		font-size: 1.25em; //20pt
-		color: #E0E0E0;
-		font-weight: 400;
-		margin-bottom: 6em;
-
-	}
-}
-
-.image{
-	width: 100%;
-	height: 400px;
-	margin: 0 auto;
-	background-color: #D8D8D8;
-	margin-bottom: $vertical-space;
-}
-
-.case-study{
-	@include span-columns(12);
-	p { 
-		font-family: "merriweather";
-		font-size: 1.375em; //22pt
-		font-weight: 200;
-		line-height: 1.75;
-		margin-bottom: $vertical-space;
-		}
-	h1{
-		font-family: "montserrat";
-		font-size: 1.875em; //30pt
-		font-weight: 400;
 	}	
 	
 	h2 {
 		font-size: 1.25em; //20pt
 		font-weight: 400;
 		}
+
+	h3{
+		font-family: "montserrat";
+		font-size: 1.125em; //18pt
+		color: #E0E0E0;
+		font-weight: 400;
+		margin-bottom: 6em;
+
+	}
 
 	h4{
 		font-family: "montserrat";
@@ -69,19 +41,67 @@ body{
 
 	li{
 		font-family: "merriweather";
-		font-size: 1.375em; //22pt;
+		font-size: 1.25em; //20pt;
 		font-weight: 300;
-		line-height: 1.75;
+		line-height: 2.5;
 		text-transform: none;
-		border-bottom: 1px solid #E0E0E0;
+		border-bottom: 1px solid #E8E8E8;
+	}	
+
+	q{
+		font-size: 1.375em; //22pt
+		font-weight: 300;
+	}
+
+	a{
+		color: #5A5B5C;
+	}
+}
+
+
+.title{
+	@include span-columns(6 of 12);
+	@include shift(3);
+	@include omega();
+	padding-top: $vertical-space-3;
+	margin-bottom: $vertical-space-2;
+	h1{
+		font-family: "merriweather";
+		font-size: 3.125em; //50pt
+		line-height: 1.2;
+		font-weight: 300;
+		margin-bottom: 15px;
 	}	
 }
 
+.video{
+	width: 100%;
+	padding-top: $vertical-space-1;
+	background-color: #E5EAEB;
+	margin-bottom: $vertical-space-2;
+	overflow: hidden;
+}
+
+video{
+	width: 65%;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	-webkit-box-shadow: 6px 7px 25px -6px rgba(156,156,156,1);
+	-moz-box-shadow: 6px 7px 25px -6px rgba(156,156,156,1);
+	box-shadow: 6px 7px 25px -6px rgba(156,156,156,1);
+}
 
 .overview{
 	@include span-columns(8 of 12);
 	@include shift(1);
-	margin-bottom: $double-vertical-space;
+	margin-bottom: $vertical-space-2;
+;
+	p{
+		font-size: 1.5625em; //25pt
+		padding-top: .75em;
+	}
 }
 
 .list{
@@ -97,13 +117,14 @@ body{
 	@include span-columns(2 of 12);
 	@include shift(1);
 	ul{
-		border-bottom: 1px solid #E0E0E0;
 		padding-bottom: 1em;
 		padding-top: 1em;
+		border-bottom: 1px solid #E8E8E8;
 	}
 	li{ 
 		font-family: "montserrat";
 		font-size: .875em; //14pt
+		line-height: 1.75;
 		border-bottom: none;
 		&:first-child{
 			color: #D0D0D0;
@@ -117,19 +138,24 @@ body{
 
 .results{
 	width: 100%;
+	position: relative;
 	background-color: white;
-	height: 300px;
-	padding-top: 4.5em;
-	padding-bottom: 4.5em;
+	padding-top: $vertical-space-2;
+	padding-bottom: $vertical-space-2;
 
 	p{
 		font-size: .875em; //14pt
+		margin-bottom: 0;
 	}
-
-	q{
-		font-size: 1.375em; //22pt
-		font-weight: 300;
-	}
+	&:before{
+    content: '';
+    width: 100%;
+    height: 225px;
+    background-image: url("/images/long-dots.png");
+    position: absolute;
+    bottom: -25px;
+    z-index: -1;
+  }
 }
 
 .results-intro{
@@ -146,8 +172,13 @@ body{
 	@include shift(2);
 	margin-top: 11em;
 	h1{
+		font-family: "montserrat";
+		font-size: 1.125em; //18pt
+		color: #E0E0E0;
+		font-weight: 400;
+		margin-bottom: 6em;
 		text-align: center;
-		margin-bottom: $vertical-space;
+		margin-bottom: $vertical-space-1;
 		font-weight: 700;
 	}
 }
