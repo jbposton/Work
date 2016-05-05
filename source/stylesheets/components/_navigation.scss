@@ -3,24 +3,20 @@
 header{
   padding:20px 0 20px 0;
   width: 100%;
-  background-color: #F9F9F9;
 
 }
 
 nav{ 
-  @include span-columns (10);
-  @include shift(1);
+  @include span-columns (12);
   h1{
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: $color-black-100;
     font-weight: 900;
     font-size: 1.5em;
     display: inline-block;
     //padding: 10px;
     float: left;
-    margin-left: 10px;
     //background-color: white;
-    border-bottom: 4px solid black;
 
   }
 
@@ -43,6 +39,10 @@ nav{
     color: #C9C9C9;
     font-weight: 700;
     display: block;
+
+    .active{
+      color:black;
+    }
   }
 
 

@@ -16,6 +16,14 @@ $vertical-space-3: 10em; // 160px
 		font-weight: 300;
 		margin-bottom: 15px;
 	}	
+
+	p { 
+    font-family: $base-font-family;
+    font-size: 1.25em; //20pt
+    font-weight: 200;
+    line-height: 1.75;
+    margin-bottom: $vertical-space-1;
+	}
 	
 	h2 {
 		font-size: 1.25em; //20pt
