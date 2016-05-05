@@ -3,15 +3,12 @@
 .comic{
   width: 100%;
   height: 7em;
-  background-color:none;
-  background-image: radial-gradient(black 15%, transparent 16%),
-  radial-gradient(black 15%, transparent 16%);
-  background-size:5px 5px;
-  background-position: 0 0, 30px 30px;
+  background-image: url("/images/footer-dots.png");
 }
 
 footer{
   width: 100%;
   height: 10em;
   background-color: #262626;
+  color: white;
 }

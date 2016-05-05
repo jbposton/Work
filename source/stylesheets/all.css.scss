@@ -29,7 +29,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 //Animation Time 
-$animation-time: .2s;
+$animation-time: .3s;
 
 //Media Queries
 
@@ -77,6 +77,10 @@ body {
   @include media($medium-screen-up) {
     font-size: 2.5em; //40px
   }
+  @include media($medium-2-screen-up){
+    text-align: center;
+    font-size: 2em;
+  }
   @include media($small-screen-up) {
     text-align: center;
     font-size: 1.25em; //20px
@@ -96,6 +100,11 @@ h2{
   font-family: $second-font-family, sans-serif;
 }
 
+.emojis{
+  @include media ($medium-2-screen-up) {
+    text-align: center;
+  }
+}
 .emoji{
   margin-right: 1em;
   display: inline-block;
@@ -103,6 +112,7 @@ h2{
   height: 49px;
   background-repeat: no-repeat;
   background-size: length;
+  position: relative;
   &.palm-tree{
     background-image: url("/images/palm-tree-50.png");
     &:hover{
@@ -111,8 +121,19 @@ h2{
   }
   &.nyc{
     background-image: url("/images/nyc.png");
+    position: relative;
     &:hover{
       background-image: url("/images/nyc-100.png");
+      &:after{
+        content: '- Lives in NYC.';
+        position: absolute;
+        font-family: $second-font-family;
+        font-size: 1.5625em; //25px
+        color: #73C7C7;
+        width: 200px;
+        left: -50px;
+        top: 50px;
+      }
     }
   }
 }
@@ -173,9 +194,9 @@ h2{
   //}
   
   &:hover{
-    -webkit-box-shadow: 2px 2px 29px 7px rgba(207,207,207,0.83);
-    -moz-box-shadow: 2px 2px 29px 7px rgba(207,207,207,0.83);
-    box-shadow: 2px 2px 29px 7px rgba(207,207,207,0.83);
+    -webkit-box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
+    -moz-box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
+    box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
     .case-title .line{
         width: 2em;
       }
@@ -226,7 +247,7 @@ h2{
   background-color: white;
   margin-bottom: $vertical-space-2;
   position: relative;
-  padding: 40px 40px 40px 45px;
+  padding: 40px 40px 30px 30px;
   //border-top: solid 5px black;
   //&:after{
     //content: '';
@@ -240,13 +261,18 @@ h2{
   &:before{
     content: '';
     width: 90%;
-    height: 200px;
+    height: 100%;
     background-color:none;
-    background-image: url("/images/dots.png");
+    background-image: url("/images/about-1-dots.png");
     position: absolute;
     right: -20px;
-    top: 55px;
+    top: 25px;
     z-index: -1;
+  }
+  &:hover{
+    .line{
+      width: 2em;
+    }
   }
 
   h2{
@@ -254,13 +280,17 @@ h2{
     color: $color-gray-100;
     font-size: 14px;
     line-height: 1.5;
-    padding-bottom: .5em;
+    -webkit-transition: width $animation-time;
+    transition: width $animation-time;
   }
   .line{
     width: 1em;
     height: 0.125em; //2px
     background-color: $color-black-100;
     margin-bottom: 10px;
+    -webkit-transition: width $animation-time;
+    transition: width $animation-time;
+    -webkit-transition-timing-function: ease-out;
   }
   h1{
     font-family: $second-font-family;

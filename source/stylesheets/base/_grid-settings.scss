@@ -8,11 +8,12 @@
 
 
 // Neat Breakpoints
-$large-screen: 900px;
 $medium-screen: 960px;
+$medium-2-screen: 630px;
 $small-screen: 435px;
 
 
 $medium-screen-up: new-breakpoint(max-width $medium-screen 12);
+$medium-2-screen-up: new-breakpoint(max-width $medium-2-screen 12);
 $small-screen-up: new-breakpoint(max-width $small-screen 8);
 
