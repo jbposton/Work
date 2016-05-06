@@ -63,11 +63,11 @@ body {
   justify-content: center;
   padding-left: 2em;
   padding-right: 2em;
+  margin-top: $vertical-space-2;
+  margin-bottom: $vertical-space-2;
 }
 
 .intro-text{
-  padding-top: 5em;
-  padding-bottom: 8em;
   max-width: 44em; //704px
   h1{
   font-family: $base-font-family, serif;
@@ -109,21 +109,21 @@ h2{
   margin-right: 1em;
   display: inline-block;
   width: 37px;
-  height: 49px;
+  height: 37px;
   background-repeat: no-repeat;
   background-size: length;
   position: relative;
   &.palm-tree{
-    background-image: url("work/images/palm-tree-50.png");
+    background-image: url("../images/palm-tree-50.png");
     &:hover{
-      background-image: url("work/images/palm-tree-100.png");
+      background-image: url("../images/palm-tree-100.png");
     }
   }
   &.nyc{
-    background-image: url("/images/nyc.png");
+    background-image: url("../images/nyc.png");
     position: relative;
     &:hover{
-      background-image: url("/images/nyc-100.png");
+      background-image: url("../images/nyc-100.png");
       &:after{
         content: '- Lives in NYC.';
         position: absolute;
@@ -200,11 +200,12 @@ h2{
     .case-title .line{
         width: 2em;
       }
+  }
+
     //&:after{
       //opacity: 1;
     //}
 
-  }
 
   .case-title{
     padding: 40px 40px 20px 45px;
@@ -263,7 +264,7 @@ h2{
     width: 90%;
     height: 100%;
     background-color:none;
-    background-image: url("/images/about-1-dots.png");
+    background-image: url("../images/about-1-dots.png");
     position: absolute;
     right: -20px;
     top: 25px;
@@ -272,6 +273,10 @@ h2{
   &:hover{
     .line{
       width: 2em;
+      background-color: #F1B469;
+    }
+    h2{
+      color: #F1B469;
     }
   }
 
@@ -280,8 +285,8 @@ h2{
     color: $color-gray-100;
     font-size: 14px;
     line-height: 1.5;
-    -webkit-transition: width $animation-time;
-    transition: width $animation-time;
+    -webkit-transition: width $animation-time, color $animation-time;
+    transition: width $animation-time, color $animation-time;
   }
   .line{
     width: 1em;
