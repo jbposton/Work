@@ -29,7 +29,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 //Animation Time 
-$animation-time: .3s;
+$animation-time: .2s;
 
 //Media Queries
 
@@ -72,6 +72,7 @@ body {
 
 .intro-text{
   max-width: 44em; //704px
+  padding-bottom: 3em;
   
   h1{
   font-family: $base-font-family, serif;
@@ -183,12 +184,19 @@ body {
 
 }
 
-.case-box{
-  background-color: white;
+.case-study{
   margin-bottom: $vertical-space-2;
-  transition: box-shadow $animation-time;
   position: relative;
-  
+  &:after{
+    content: '';
+    width: 100%;
+    height: 97%;
+    background-color: #EFEFEF;
+    position: absolute;
+    right: -5px;
+    top: 20px;
+    z-index: -1;
+  }
   //&:after{
     //content: '';
     //width: 100%;
@@ -205,14 +213,27 @@ body {
     //-webkit-transition-timing-function: ease;
 
   //}
-  
+  .case-box{
+    background-color: white;
+    -webkit-transition: transform $animation-time;
+    transition: transform $animation-time;
+  }
+
   &:hover{
-    -webkit-box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
-    -moz-box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
-    box-shadow: 3px 6px 30px 5px rgba(214,214,214,0.76);
+    .case-box{
+      -webkit-transform: translate(5px,5px); 
+      -moz-transform: translate(5px,5px); 
+      -ms-transform: translate(5px,5px); 
+      -o-transform: translate(5px,5px); 
+      transform: translate(5px,5px);
+    }
     .case-title .line{
         width: 2em;
+        background-color: #446A8E;
       }
+    .case-title h2{
+        color: #446A8E;
+    }
   }
 
     //&:after{
@@ -227,9 +248,8 @@ body {
         height: 0.125em; //2px
         background-color: $color-black-100;
         margin-bottom: 22px;
-        -webkit-transition: width $animation-time;
-        transition: width $animation-time;
-        -webkit-transition-timing-function: ease-out;
+        -webkit-transition: width $animation-time, background-color $animation-time;
+        transition: width $animation-time, background-color $animation-time;
       }
       h1{
         font-family: $base-font-family;
@@ -244,7 +264,7 @@ body {
         color: $color-gray-100;
         font-size: 14px;
         padding-bottom: .5em;
-        transition: text-decoration 1s;
+        transition: color $animation-time;
       }
   }
 
@@ -257,11 +277,9 @@ body {
   }
 }
 
-.article-box{
-  background-color: white;
+.article{
   margin-bottom: $vertical-space-2;
   position: relative;
-  padding: 40px 40px 30px 30px;
   //border-top: solid 5px black;
   //&:after{
     //content: '';
@@ -274,19 +292,35 @@ body {
     //}
   &:before{
     content: '';
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 90%;
     background-color:none;
     background-image: url("../images/about-1-dots.png");
+    background-repeat: repeat;
     position: absolute;
     right: -20px;
-    top: 25px;
+    top: 45px;
     z-index: -1;
+  }
+  .article-box{
+    background-color: white;
+    padding: 40px 40px 30px 30px;
+    -webkit-transition: transform $animation-time;
+    transition: transform $animation-time;
+
+
   }
   &:hover{
     .line{
       width: 2em;
       background-color: #F1B469;
+    }
+    .article-box{
+      -webkit-transform: translate(5px,5px); 
+      -moz-transform: translate(5px,5px); 
+      -ms-transform: translate(5px,5px); 
+      -o-transform: translate(5px,5px); 
+      transform: translate(5px,5px);
     }
     h2{
       color: #F1B469;
