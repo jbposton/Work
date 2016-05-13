@@ -14,8 +14,8 @@ $action-color: $color-black-100;
 //Spacing
 $vertical-space-1: 4.75em; //60px 
 $vertical-space-2: 5em; //100px 
-$vertical-space-100: 6.25em; //100px
-$vertical-space-50: 3.125em; //50px
+$vertical-space-100: 6em; //100px
+$vertical-space-50: 41px; //50px
 $vertical-space-3: 10em; // 160px
 
 // Typography
@@ -48,7 +48,7 @@ body {
   font-size: 1em;
   background-color: $color-gray-50;
   color: $color-black-100;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-right: 20px;
 }
 
@@ -69,18 +69,20 @@ body {
   //justify-content: center;
   @include span-columns(12);
   @include omega();
-  margin-top: $vertical-space-100;
-  margin-bottom: $vertical-space-100;
+  margin-top: 100px;
+  margin-bottom: 116px;
 }
 
 .intro-text{
   
   h1{
   font-family: $base-font-family, serif;
-  font-size: 4.854em; //67px
+  font-size: 67.77px; //67px
   font-weight: 100; //light
   line-height: 1.4;
   margin-bottom: 0;
+  letter-spacing: 2.2px;
+  font-weight: 300;
     @include media($medium-screen-up) {
       font-size: 2.5em; //40px
     }
@@ -146,8 +148,9 @@ body {
   }
   a{
     border-bottom: 2px solid #F1B469;
+    padding-bottom: 4px;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.85em; //14px
     font-weight: 700;
   }
 }
