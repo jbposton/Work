@@ -19,7 +19,7 @@
     max-width: $max-width;
     opacity: $visual-grid-opacity;
     pointer-events: none;
-    position: fixed;
+    position: absolute; //was fixed
     right: 0;
     width: 100%;
 

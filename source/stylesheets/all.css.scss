@@ -13,7 +13,9 @@ $action-color: $color-black-100;
 
 //Spacing
 $vertical-space-1: 4.75em; //60px 
-$vertical-space-2: 5em; //80px 
+$vertical-space-2: 5em; //100px 
+$vertical-space-100: 6.25em; //100px
+$vertical-space-50: 3.125em; //50px
 $vertical-space-3: 10em; // 160px
 
 // Typography
@@ -41,10 +43,13 @@ $animation-time: .2s;
 
 
 body {
+  position: relative; //because of visual grid **delete at end
   font-family: $base-font-family, serif;
   font-size: 1em;
   background-color: $color-gray-50;
   color: $color-black-100;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 
@@ -62,20 +67,20 @@ body {
   //align-items: center;
   //-webkit-justify-content: center;
   //justify-content: center;
-  @include span-columns(11);
+  @include span-columns(12);
   @include omega();
-  margin-top: $vertical-space-2;
-  margin-bottom: $vertical-space-1;
+  margin-top: $vertical-space-100;
+  margin-bottom: $vertical-space-100;
 }
 
 .intro-text{
   
   h1{
   font-family: $base-font-family, serif;
-  font-size: 4.5em; //67px
+  font-size: 4.854em; //67px
   font-weight: 100; //light
-  line-height: 1.3;
-  margin-bottom: .5em;
+  line-height: 1.4;
+  margin-bottom: 0;
     @include media($medium-screen-up) {
       font-size: 2.5em; //40px
     }
@@ -149,15 +154,15 @@ body {
 .case-study{
   margin-bottom: $vertical-space-2;
   position: relative;
-  width: 100%;
+  width: 105%;
   &:after{
     content: '';
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     background-color: #EFEFEF;
     position: absolute;
-    right: -20px;
-    top: 20px;
+    right: -2.5%;
+    top: 6.75%;
     z-index: -1;
   }
   //&:after{
