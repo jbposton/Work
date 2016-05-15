@@ -5,7 +5,7 @@
 @import "neat/neat";
 
 //Colors
-$color-black-100: #4A4A4A;
+$color-black-100: #36373B;
 $color-gray-100: #E0E0E0;
 $color-gray-50: #F9F9F9;
 
@@ -15,12 +15,13 @@ $action-color: $color-black-100;
 $vertical-space-1: 4.75em; //60px 
 $vertical-space-2: 5em; //100px 
 $vertical-space-100: 6em; //100px
-$vertical-space-50: 41px; //50px
+$vertical-space-50: 41px; 
 $vertical-space-3: 10em; // 160px
+$vertical-space-30: 30px;
 
 // Typography
 $base-font-family: 'merriweather';
-$second-font-family: 'Montserrat';
+$second-font-family: 'Work Sans';
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -48,7 +49,7 @@ body {
   font-size: 1em;
   background-color: $color-gray-50;
   color: $color-black-100;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-right: 20px;
 }
 
@@ -69,20 +70,26 @@ body {
   //justify-content: center;
   @include span-columns(12);
   @include omega();
-  margin-top: 100px;
-  margin-bottom: 116px;
+  margin-top: 75px;
+  margin-bottom: 100px;
+
+  .line{
+    @include span-columns (2 of 12);
+    height: 12px;
+    background-color: #F36C56;
+    margin-top: 20px; 
+  }
 }
 
 .intro-text{
   
   h1{
   font-family: $base-font-family, serif;
-  font-size: 67.77px; //67px
-  font-weight: 100; //light
+  font-size: 5.124em; //67px
+  font-weight: 400; //regular
   line-height: 1.4;
   margin-bottom: 0;
   letter-spacing: 2.2px;
-  font-weight: 300;
     @include media($medium-screen-up) {
       font-size: 2.5em; //40px
     }
@@ -107,12 +114,12 @@ body {
 
 
 .portfolio{
-  @include span-columns(11);
+  @include span-columns(12);
 }
 
 
 .left-col{
-  @include span-columns (5 of 11);
+  @include span-columns (5 of 12);
   //@include media($medium-screen-up) {
     //@include span-columns(12 of 12);
     //@include shift(0);
@@ -121,8 +128,8 @@ body {
 
 
 .right-col{
-  @include span-columns (5 of 11);
-  @include shift(1);
+  @include span-columns (5 of 12);
+  @include shift(1.3);
   @include omega();
   //@include media($medium-screen-up) {
     //@include span-columns(12 of 12);
@@ -135,14 +142,16 @@ body {
 
 .about-me{
   margin-bottom: $vertical-space-2;
+  width: 115%;
   p{ 
     font-family: $second-font-family;
-    font-size: 1.25em; //20px
+    font-size: 1.25em; //25px
     line-height: 1.3;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1px;
     em{
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
     }
 
   }
@@ -157,7 +166,7 @@ body {
 .case-study{
   margin-bottom: $vertical-space-2;
   position: relative;
-  width: 105%;
+  width: 115%;
   &:after{
     content: '';
     width: 95%;
@@ -241,7 +250,7 @@ body {
       h1{
         font-family: $base-font-family;
         color: $color-black-100;
-        font-size: 1.6em; //25px
+        font-size: 27px; //25px
         font-weight: 300;
         line-height: 1.4;
       }
@@ -250,6 +259,8 @@ body {
         font-family: $second-font-family;
         color: $color-gray-100;
         font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 600;
         padding-bottom: .5em;
         transition: color $animation-time;
       }

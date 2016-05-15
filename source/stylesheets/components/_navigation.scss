@@ -2,12 +2,11 @@
 
 header{
   @include span-columns(12);
-  padding-top: $vertical-space-50;
+  padding-top: 30px;
   h1{
-    @include span-columns(1 of 12);
-    font-family: 'Roboto', sans-serif;
+    font-family: $second-font-family, sans-serif;
     color: $color-black-100;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5em;
     display: inline-block;
     margin-bottom: 0px;
@@ -18,28 +17,28 @@ header{
 }
 
 nav{ 
-  @include span-columns (11 of 12);
-
+  float: right;
   ul{
     padding: 0;
     margin: 0;
+    float: right;
   }
 
   li{
     float: left;
     padding: 5px 0px 0 0px;
-    margin-right: 30px;
+    margin-left: 30px;
     .active{
       color: $color-black-100;
     }
   }
 
   a{
-    text-transform: uppercase;
-    font-size: 14px; //14px
+    font-size: 15px; //14px
     color: $color-gray-100;
     font-weight: 600;
     display: block;
+    letter-spacing: 1px;
     //border-bottom: 5px solid $color-gray-50;
     .active{
       color: $color-black-100;
