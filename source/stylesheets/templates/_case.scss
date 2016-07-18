@@ -5,195 +5,400 @@ $vertical-space-3: 10em; // 160px
 
 //-----------
 
+.nfl-case{
 
+}
+
+em{
+	font-style: oblique;
+	font-weight: 600;
+}
+
+.intro{
+	margin-top: 6%;
+	margin-bottom: 6%;
+	@include span-columns (11 of 12);
+	@include shift (1);
+	@include media($tablet-break){
+		@include span-columns (6);
+		@include shift(0);
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	@include media($mobile-break){
+		@include span-columns(4);
+	}
+}
 .title{
-	@include span-columns(9 of 12);
-	@include shift(1);
+	margin-bottom: 1.5em;
+	@include span-columns(7 of 11);
 	@include omega();
-	padding-top: $vertical-space-2;
-	margin-bottom: $vertical-space-3;
+	@include media($tablet-break){
+		@include span-columns (5 of 6);
+	}
+	@include media($mobile-break){
+		@include span-columns(4);
+		margin-bottom: .5em;
+	}
+	
 	.line{
 		width: 2em;
 		height: 6px;
-		background-color: #DAEE4C;
-		margin-bottom: 1em;
+		background-color: $color-black-100;
+		margin-bottom: 2em;
 	}
 	h1{
 		font-family: $base-font-family;
 		font-size: 54px; //50pt
 		line-height: 1.2;
-		font-weight: 300;
+		font-weight: 600;
 		margin-bottom: 15px;
-	}	
-	h3{
-		font-family: $second-font-family;
-		font-size: 20px; //18pt
-		color: #E0E0E0;
+		@include media($tablet-break){
+			font-size: 40px;
+		}
+		@include media($mobile-break){
+			font-size: 25px;
+		}
+	}
+}
+
+.overview{
+	@include span-columns (11 of 11);
+	p{
+		font-family: $base-font-family;
+		font-size: 1.25em;
+		color: #626262;
+		margin-bottom: 1.5em;
+		@include span-columns (8 of 11);
+		@include media($tablet-break){
+			@include span-columns (4 of 6);
+			font-size: 1em;
+		}
+		@include media($mobile-break){
+			@include span-columns(4);
+		}
+	}
+	ul{
+		border-left: 1px solid #979797;
+		font-size: 14px;
 		font-weight: 500;
+		padding-left: 1.4em;
+		display: inline-block;
+		text-transform: uppercase;
+		@include span-columns (2 of 11);
+		@include shift (1);
+		@include media($tablet-break){
+			@include span-columns (1.5 of 6);
+			@include shift(.5);
+		}
+		@include media($mobile-break){
+			@include span-columns(4);
+			@include shift(0);
+			font-size: 12px;
+		}
+	}
+	li{
+		text-transform: lowercase;
+		font-weight: 400;
+		padding-top: .2em;
+		padding-bottom: .2em;
 	}
 }
 	
-.poster{
-	@include span-columns(12 of 12);
-	margin-bottom: $vertical-space-2;
+.promo{
+	width: 100%;
 }
 
-.solutions-overview{
-		@include span-columns(12 of 12);
-		font-family: $second-font-family;
-		margin-bottom: $vertical-space-1;
-		@include omega();
+.promo-image{
+	margin: 0 auto;
+	height: 100%;
+	@include span-columns (12);
+	img{
+		width: 100%;
+		padding-top: 3em;
+		@include span-columns (10 of 12);
+		@include shift(1);
+	}
+}
+.football-page{
+	background-color: #E1F071;
 }
 
-.problem-brief{
-	@include span-columns (9 of 12);
-	margin-bottom: $vertical-space-2;
-	p { 
-	    font-family: $second-font-family;
-	    font-size: 25px; //20pt
-	    font-weight: 600;
-	    line-height: 1.5;
-	    margin-bottom: 0;
+
+.summary{
+	margin-top: 5em;
+	margin-bottom: 4em;
+	@include span-columns(11 of 12);
+	@include shift(1);
+	@include media($tablet-break){
+		@include span-columns(6);
+		@include shift(0);
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	@include media($mobile-break){
+		@include span-columns(4);
+		margin-top: 2em;
+	}
+	p{
+		font-size: 20px;
+		@include span-columns(8 of 11);
+		@include media($tablet-break){
+			@include span-columns (4 of 6);
+			font-size: 1em;
+		}
+		@include media($mobile-break){
+			@include span-columns(4);
+			margin-bottom: 2em;
+		}
 	}
 }
 
 .credits{
-	@include span-columns(2 of 12);
+	font-size: 14px;
+	@include span-columns(2 of 11);
 	@include shift(1);
+	@include media($tablet-break){
+		@include span-columns (1.5 of 6);
+		@include shift(.5);
+		font-size: 12px;
+
+	}
+	@include media($mobile-break){
+		@include span-columns(4);
+		@include shift(0);
+		font-size: 12px;
+	}
 	h1{
-		font-size: .875em; //14pt
-		color: #989898;
-		font-family: $second-font-family;
+		font-family: $base-font-family;
+		font-size: 14px;
 		font-weight: 500;
-		padding-bottom: 10px;
-		text-transform: uppercase;
+		@include media($tablet-break){
+			font-size: 12px;
+		}
 	}
 	ul{
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-bottom: 1px solid #E8E8E8;
-		&:last-child{
-			border-bottom: none;
-		}
-	}
-	li{ 
-		font-family: $second-font-family;
-		font-size: .875em; //14pt
-		line-height: 1.75;
-		font-weight: 500;
-		border-bottom: none;
-		&:first-child{
-			color: #D0D0D0;
-		}
-		&:nth-child(2){
-			color: #989898;
-		}
-	}
-}
-
-.list{
-	@include span-columns(4 of 8);
-	margin-top: $vertical-space-2;
-	h4{
-		font-family: $second-font-family;
-		text-transform: uppercase;
-		font-size: 14px;
+		margin-top: 1.5em;
 	}
 	li{
-		font-family: $second-font-family;
-		font-size: 1.25em; //20pt;
-		font-weight: 400;
-		line-height: 2.5;
-		text-transform: none;
-	 }	
+		font-family: $base-font-family;
+		font-weight: 500;
+		padding: 1em 0 1em 0;
+		border-top: 1px solid $color-gray-100;
+		&:last-child{
+			border-bottom: 1px solid $color-gray-100;
+		}
+	}
+	em{
+		display: block;
+		font-style: normal;
+		font-weight: 500;
+		color: #9B9A9A;
+	}
+}
+
+.chapter{
+	//padding-top: 2em;
+	margin-bottom: 2em;
+}
+
+.chapter-end{
+	border-bottom: 1px solid $color-gray-100;
 }
 
 
+.context{
+	//margin-bottom: 2.5em;
+	margin-top: 2em;
+	@include span-columns(8 of 12);
+	@include shift(2);
+	@include media($mobile-break){
+		padding-left: 1em;
+		padding-right: 1em;
+		@include span-columns(4);
+		@include shift(0);
 
-
-.process-wrapper{
-	background-color: white;
-}
-
-
-section{
-	padding-top: $vertical-space-3;
-	margin-bottom: $vertical-space-1;
-	position: relative;
-	background-color: white;
-	.text{
-		@include span-columns (9 of 12);
-		@include shift(1.5);
-		margin-bottom: $vertical-space-2;
+	}
 	}
 	h1{
-		font-size: 1.5625em; //25pt
-		font-family: $second-font-family;
-		font-weight: 600; 
-		margin-bottom: 0;
-	} 
-	.line{
-		width: 2em;
-		background-color: $color-black-100;
-		height: 3px;
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
+		font-family: $base-font-family;
+		font-size: 25px;
+		font-weight:500;
+		margin-bottom: .2em;
+		//max-width: 15em;
+	}
+	h2{
+		font-family: $base-font-family;
+		font-size: 18px;
+		font-weight: 500;
+		color: #BABABA;
+		margin: 0 0 1.5em 0;
+	}
+	.text{
+		font-size: 20px;
+		//margin-top: 1.5em;
+		margin-bottom: 2em;
+		//text-align: left;
+		@include media($tablet-break){
+			font-size: 1em;
+	}
+}
+
+.context-img{
+	text-align: center;
+	max-width: 100%;
+}
+
+.outputs{
+	width: 100%; 
+	background-color: #F1F0F0;
+	text-align: center;
+	overflow: hidden;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	//margin-bottom: 2.5em;
+	h4{
+		@include span-columns(8 of 12);
+		@include shift(2);
+		font-family: $base-font-family;
+		font-size: 1em;
+		font-weight: 400;
+		color: $color-black-80;
+		margin-bottom: 4em;
+	}
+}
+
+
+.outputs-gallery{
+	@include span-columns(10 of 12);
+	@include shift(1);
+	@include media($mobile-break){
+		@include span-columns (4);
+		@include shift(0);
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+	a{
+		@include span-columns (5 of 10);
+		@include media($mobile-break){
+			@include span-columns (4 of 4);
+			@include shift(0);
+		}
+		//@include shift(1);
+		text-align: center;
+		-webkit-transition: opacity $animation-time;
+		transition: opacity $animation-time;
+		&:hover{
+			opacity: .7;
+		}
+		.caption{
+			font-size: 14px;
+			color: #979797;
+			font-weight: 300;
+			display: block;
+		}
+	}
+	img{
+		width: 100%;
+	}
+	.border{
+		border: 1px solid $color-gray-100;
+	}
+}
+
+.insights{
+	@include span-columns (4.5 of 10);
+	@include shift(.5);
+	@include media ($mobile-break){
+		@include span-columns(4);
+		@include shift(0);
+		margin-top: 4em;
 	}
 	p{
-		font-family: $second-font-family;
-		font-size: 1.5625em; //25pt
+	 	font-family: $base-font-family;
+		font-size: 1em;
+		font-weight: 300;
+		text-align: left;
+		color: $color-black-80;
+		em{
+			font-weight: 400;
+		}
+	}
+	h5{
+		font-family: $base-font-family;
+		font-size: 1em;
 		font-weight: 400;
-		margin-bottom: 0;
-		line-height: 1.3;
-	}
-	img {
-		margin: 0 auto;
-		&.nfl-discovery{
-			display: block;
-		}
-		&.nfl-userflow{
-			width: 100%;
-			display: block;
-			@include span-columns(12 of 12);
-			@include shift(1.5);
-			margin-bottom: $vertical-space-1;
-		}
-		&.nfl-adaptive-video{
-			width: 40%;
-			border: 1px solid #CAC8C8;
-			margin-right: 40px;
-		}
-		&.nfl-stadium-mode{
-			width: 40%;
-			border: 1px solid #CAC8C8;
-		}
+		text-align: left;
+		color: $color-black-80;
 	}
 }
 
-.gallery-container{
+
+.spotlight{
+	@include span-columns(12);
+	text-align: center;
+	h4{
+		font-family: $base-font-family;
+		font-size: 1em;
+		font-weight: 400;
+		color: #979797;
+	}
+	a{
+		text-align: center;
+		-webkit-transition: opacity $animation-time;
+		transition: opacity $animation-time;
+		&:hover{
+			opacity: .7;
+		}
+	}
+	img{
+		max-width: 100%;
+	}
+}
+
+.tick-list{
+	li{
+		font-size: 2em;
+		font-weight: 600;
+	}
+}
+
+.caption{
+	font-size: 14px;
+	color: $color-black-80;
+	font-weight: 300;
+	display: block;
+	text-align: center;
+}
+
+.end{
 	width: 100%;
-	background-color: #EEEDED;
-	padding-top: $vertical-space-2;
-	padding-bottom: $vertical-space-2;
-
+	background-color: $color-black-100;
+	color: white;
+	text-align: left;
+	border-top: 5px solid #2E2F33;
+	@include media ($tablet-break){
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.bookend{
+		@include span-columns(12);
+		font-size: 35px;
+		padding-top: 4em;
+		padding-bottom: 4em;
+		@include media($mobile-break){
+			font-size: 20px;
+		}
+		a{
+			color: #F4E2B2;
+			&:hover{
+				color: lighten(#F4E2B2, 5%);
+			}
+		}
+	}
 }
 
-.gallery{
-	text-align: center;
-	margin: 0 auto;
-}
-
-
-
-
-//PLACEHOLDER
-.placeholder{
-	text-align: center;
-	background-color: #EFEFEF;
-	padding-top: 50px;
-	color: #B4B4B4;
-}
-
-
-
-
+a{
+  	color: #F4E2B2; 
+  	text-decoration: none;
+  }

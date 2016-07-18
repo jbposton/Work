@@ -8,20 +8,23 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-
-  
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900' rel='stylesheet' type='text/css'>
-
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,500,700' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
+    
     <link href="stylesheets/all.css" rel="stylesheet" />
+    
+
+    <!--scripts-->
+    <script src="javascripts/jquery-1.11.2.min.js"></script>
+    <script src="javascripts/modaal.js"></script>
     <script src="javascripts/all.js"></script>
   </head>
 
   <body class="<%= page_classes %>">
     <%= partial "nav" %>
     <%= yield %>
+    <%=partial "footer" %>
   </body>
 </html>

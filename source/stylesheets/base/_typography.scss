@@ -7,13 +7,11 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: $base-font-size;
+  font-family: $base-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -22,18 +20,6 @@ p {
   margin: 0 0 $small-spacing;
 }
 
-a {
-  font-family: $second-font-family;
-  color: $action-color;
-  text-decoration: none;
-  transition: color $base-duration $base-timing;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: shade($action-color, 25%);
-  }
-}
 
 hr {
   border-bottom: $base-border;
@@ -43,8 +29,3 @@ hr {
   margin: $base-spacing 0;
 }
 
-img,
-picture {
-  margin: 0;
-  max-width: 100%;
-}

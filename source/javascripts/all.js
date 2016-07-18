@@ -1,6 +1,14 @@
 //= require_tree .
 
-$(function() {
-  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-});
+// Get the modal
 
+window.onload = function(){
+	$('.gallery').modaal({
+		type: 'image'
+	});
+
+	$('.video').modaal({
+		type: 'video'
+	});
+
+};
