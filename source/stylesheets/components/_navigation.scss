@@ -1,11 +1,14 @@
 //NAVIGATION
 
 header{
+  position: fixed;
+  width: 100%;
 }
 
 nav{ 
-  padding-top: 40px;
-  max-width: 63.75em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
   text-align: right;
@@ -16,21 +19,6 @@ nav{
   @include media($mobile-break){
     text-align: left;
     font-size: 15px;
-  }
-  ul{
-    padding: 0;
-    margin: 0;
-    //padding-left: 0;
-  }
-
-  li{
-    display: inline-block;
-    padding: 5px 0px 0 0px;
-    margin-left: 25px;
-    font-weight: 500;
-    &:first-child{
-      margin-left: 0;
-    }
   }
 
   a{
@@ -54,3 +42,22 @@ nav{
 
 
 }
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    //padding-left: 0;
+    clear: both;
+  }
+
+nav li{
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: 0.875em;
+    padding: 5px 0px 0 0px;
+    margin-left: 25px;
+    font-weight: 400;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
