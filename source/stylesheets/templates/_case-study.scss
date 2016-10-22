@@ -39,22 +39,24 @@ p{
 	&.caption{
 		font-size: 14px;
 		color: #979797;
+		display: block;
 		font-weight: 300;
 		text-align: center;
-		margin: $size-small-4 0 0 0;
+		margin: 0;
 		@include media($mobile-break){
-			margin-top:0;
 		}
 	}
 	&.header{
+		margin: 0;
+		display: block;
 		font-weight: 500;
 		text-align: right;
-		margin-top: $size-2;
 	}
 }
  
 .description{
   font-family: $base-font-family;
+  display: block;
   font-size: 18px;
   line-height: 1.5;
   color: $color-gray-180;
@@ -67,7 +69,6 @@ p{
 	@include shift(1);
 	height: 400px;
 	padding-bottom: 50px;
-	//margin-top:-40px; //correction for the nav
 	display: flex;
 	align-items: flex-end;
 	@include media ($mobile-break){
@@ -83,7 +84,7 @@ p{
 }
 
 .case-intro{
-	padding-left: 20px;
+	padding-left: 10px;
 	@include span-columns(10 of 10);
 	@include media($mobile-break){
 		@include span-columns(4);
@@ -92,7 +93,7 @@ p{
 }
 
 .title{
-	@include span-columns(6 of 10);
+	@include span-columns(7 of 10);
 	@include media($mobile-break){
 		@include span-columns (3 of 4);
 		margin-bottom: $size-1;
@@ -106,7 +107,7 @@ p{
 .credits{
 	padding-left: 4em;
 	@include span-columns(2 of 10);
-	@include shift(2);
+	@include shift(1);
 	@include media($mobile-break){
 		@include span-columns(3 of 4);
 		@include shift(0);
@@ -133,6 +134,7 @@ p{
 		li{
 		font-style: normal;
 		font-weight: 500;
+		margin-bottom: $size-small-4;
 		}
 	}
 }
@@ -294,17 +296,22 @@ p{
 	max-width: 1220px;
 	margin: 0 auto;
 	background-color: #F8F8F8;
-	text-align: left;
-	overflow: hidden;
-	padding-top: $size-6;
-	padding-bottom: $size-6;
+	padding-top: $size-5;
+	padding-bottom: $size-5;
+	margin-bottom: $size-2;
+	&.before-chpt{
+		margin-bottom: 0;
+	}
+	&.sketch-doc{
+		background-color: #F2F2F2;
+	}
 	@include media($tablet-break){
 		padding-left: $size-base;
 		padding-right: $size-base;
 	}
 	@include media($mobile-break){
-		padding-top: $vertical-space-large-1;
-		padding-bottom: $vertical-space-large-1;
+		padding-top: $size-2;
+		padding-bottom: $size-2;
 	}
 }
 
@@ -313,6 +320,7 @@ p{
 	@include row();
 	display: flex;
 	align-items: center;
+	margin-bottom: $size-2;
 	@include media($mobile-break){
 		@include span-columns (4);
 		@include shift(0);
@@ -330,33 +338,28 @@ p{
 	@include media($mobile-break){
 		@include span-columns (4 of 4);
 		@include shift(0);
-		margin-bottom: $vertical-space-large-1;
+		margin-bottom: $size-2;
 	}
-	&.one{
-		@include span-columns(10);
+	&.medium{
+		@include span-columns(10 of 12);
 		@include shift(1);
-		margin-bottom: $size-8;
+		@include media($mobile-break){
+			margin-bottom: 0;
+		}
 	}
-	&.flow{
-		@include span-columns(12);
+	&.large{
+		@include span-columns(12 of 12);
 		@include shift(0);
-		margin-top: $size-5;
-		margin-bottom: $size-5;
+		@include media($mobile-break){
+			margin-bottom: 0;
+		}
 
 	}
-	&.trifecta{
-		@include span-columns(12);
-		@include shift (0);
-		margin-bottom: $size-5;
-
-	}
-	
 }
 
 video{
 	@include span-columns(12);
 	margin-bottom: 1.5em;
-	//margin-top: 1.5em;
 }
 
 .back{
