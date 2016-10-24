@@ -176,17 +176,17 @@ em{
     line-height: 1.6;
     padding-left: 5px;
     font-weight: 300;
-    font-size: $size-2;
+    font-size: 1.9rem;
     margin-bottom: $size-1;
     @include media($mobile-break){
       font-size: $size-1;
       margin-bottom: $size-base;
     }
   }
-  border-top: 10px solid $color-black-100;
+  border-top: 31px solid $color-black-100;
   padding-top: $size-5;
-  @include span-columns(8 of 12);
-  @include shift(3);
+  @include span-columns(8.5 of 12);
+  @include shift(2.75);
   @include media($tablet-break){
     @include span-columns (4 of 6);
     @include shift(1);
@@ -205,7 +205,7 @@ em{
 
 #recent-work-header{
   display: inline-block;
-  margin-top: $size-9;
+  margin-top: $size-7;
   font-weight: 600;
   @include media($mobile-break){
     margin-top: $size-4;
@@ -231,7 +231,7 @@ em{
 
 .portfolio{
   margin-bottom: $size-6;
-  margin-top: $size-6;
+  margin-top: $size-3;
   //padding-left:10px;
   //padding-right:10px;
   @include span-columns(12);
@@ -246,6 +246,9 @@ em{
 }
 
 .case-row{
+  @include row();
+  @include span-columns (8.5 of 12);
+  @include shift(2.75);
   display: flex;
   align-items: center;
   margin-bottom: $size-4;
@@ -259,7 +262,7 @@ em{
 
 .case-study{
   opacity: .8;
-  @include span-columns(5.6 of 12);
+  @include span-columns(8 of 8);
   @include media($tablet-break){
     @include span-columns(12 of 12);
   }
@@ -276,12 +279,6 @@ em{
     margin-bottom: $size-small-4;
     font-family: $second-font-family;
     font-weight: 500;
-  }
-  &.right{
-    @include shift(.8);
-    @include media($tablet-break){
-      @include shift(0);
-    }
   }
 }
 
@@ -355,9 +352,11 @@ em{
 img {
   display: block;
   &.wave{
-    width: 115%;
-    margin-left: -190px;
-    align-self: center;
+    width: 80%;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
     @include media($tablet-break){
         align-self: flex-end;
         width: 80%;
@@ -370,9 +369,11 @@ img {
     }
   }
   &.nfl{
-    width: 100%;
-    margin-right: -100px;
-    align-self: center;
+    width: 80%;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
     @include media($tablet-break){
         align-self: flex-end;
         width: 80%;
@@ -390,7 +391,7 @@ img {
     align-self: flex-end;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -40px;
+    margin-bottom: -190px;
     @include media($mobile-break){
       margin-bottom: -90px;
     }
