@@ -344,6 +344,10 @@ em{
     background-color: #FFE3D5;
   }
 
+  &.five{
+    background-color: #F1F8F6;
+  }
+
   &.coming-soon{
     opacity: .3;
   }
@@ -373,7 +377,7 @@ img {
     align-self: flex-end;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -90px;
+    margin-bottom: -50px;
     @include media($tablet-break){
         align-self: flex-end;
         width: 80%;
@@ -391,7 +395,17 @@ img {
     align-self: flex-end;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -90px;
+    margin-bottom: -50px;
+    @include media($mobile-break){
+      margin-bottom: -90px;
+    }
+  }
+  &.cmf{
+    width: 65%;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -100px;
     @include media($mobile-break){
       margin-bottom: -90px;
     }
