@@ -39,10 +39,11 @@ p{
 	&.caption{
 		font-size: 14px;
 		color: #979797;
+		max-width: 700px;
+		margin: 0 auto;
 		display: block;
 		font-weight: 300;
 		text-align: center;
-		margin: 0;
 		@include media($mobile-break){
 		}
 	}
@@ -50,7 +51,8 @@ p{
 		margin: 0;
 		display: block;
 		font-weight: 500;
-		text-align: right;
+		text-align: left;
+		padding-top:$size-base;
 	}
 }
  
@@ -358,8 +360,11 @@ p{
 }
 
 video{
-	@include span-columns(12);
-	margin-bottom: 1.5em;
+	width: 100%;
+	padding-top: 1.2rem;
+	background-color: #E5E3E3;
+	border-radius: 10px 10px 0px 0px;
+	margin: $size-1 0 $size-1 0;
 }
 
 .back{
