@@ -79,9 +79,8 @@ p{
 		height: 400px;
 		padding-right: 1em;
 		padding-left: 1em;
-		padding-top: $size-2;
+		padding-top: $size-5;
 		margin-top: 0px;
-		border-top: solid 2px $color-black-100;
 	}
 }
 
@@ -97,7 +96,7 @@ p{
 .title{
 	@include span-columns(7 of 10);
 	@include media($mobile-break){
-		@include span-columns (3 of 4);
+		@include span-columns (4 of 4);
 		margin-bottom: $size-1;
 		padding-left: 0px
 	}
@@ -111,7 +110,7 @@ p{
 	@include span-columns(2 of 10);
 	@include shift(1);
 	@include media($mobile-break){
-		@include span-columns(3 of 4);
+		@include span-columns(4 of 4);
 		@include shift(0);
 		padding-left: 0px;
 	}
@@ -145,13 +144,12 @@ p{
 	max-width: 1080px;
 	margin: 0 auto;
 	margin-top: 200px;
-	//margin-bottom: $size-7;
   	@include media($tablet-break){
   		//margin-bottom: $size-5;
   	}
   	@include media($mobile-break){
   		//margin-bottom: $size-3;
-  		margin-top: 30px;
+  		margin-top: 100px;
   	}
 
   	&.wave{
@@ -169,6 +167,9 @@ p{
 	@include media($tablet-break){
 		padding: 0 1em 0 1em;
 	}
+	@include media($mobile-break){
+		padding: 20px 0 20px 0;
+	}
 }
 
 .case-poster-img{
@@ -176,8 +177,8 @@ p{
 	margin-top: -$size-7;
 	margin-bottom: $size-7;
 	@include media($mobile-break){
-		margin-top: -50px;
-		margin-bottom: $size-5;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -365,6 +366,10 @@ video{
 	background-color: #E5E3E3;
 	border-radius: 10px 10px 0px 0px;
 	margin: $size-1 0 $size-1 0;
+	&.no{
+		border-radius: none;
+		padding-top: 0;
+	}
 }
 
 .back{
