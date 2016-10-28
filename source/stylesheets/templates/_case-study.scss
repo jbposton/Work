@@ -95,6 +95,7 @@ p{
 
 .title{
 	@include span-columns(7 of 10);
+	padding-left: 10px;
 	@include media($mobile-break){
 		@include span-columns (4 of 4);
 		margin-bottom: $size-1;
@@ -107,8 +108,8 @@ p{
 
 .credits{
 	padding-left: 4em;
-	@include span-columns(2 of 10);
-	@include shift(1);
+	@include span-columns(3 of 10);
+	@include shift(0);
 	@include media($mobile-break){
 		@include span-columns(4 of 4);
 		@include shift(0);
@@ -153,7 +154,7 @@ p{
   	}
 
   	&.wave{
-  		background-color: #5BB8E3;
+  		background-color: #86D7FC;
   	}
   	&.lam{
   		background-color: #FFE3D5;
