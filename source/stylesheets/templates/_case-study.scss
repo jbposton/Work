@@ -76,7 +76,7 @@ p{
 	@include media ($mobile-break){
 		@include span-columns (4);
 		@include shift(0);
-		height: 400px;
+		height: auto;
 		padding-right: 1em;
 		padding-left: 1em;
 		padding-top: $size-5;
@@ -150,7 +150,7 @@ p{
   	}
   	@include media($mobile-break){
   		//margin-bottom: $size-3;
-  		margin-top: 100px;
+  		margin-top: 0px;
   	}
 
   	&.wave{
@@ -211,7 +211,7 @@ p{
 		font-size: $size-1;
 	}
 	@include media($mobile-break){
-  		font-size: $size-1;
+  		font-size: $size-base;
   	}
 }
 
@@ -345,15 +345,15 @@ p{
 		margin-bottom: $size-2;
 	}
 	&.medium{
-		@include span-columns(10 of 12);
-		@include shift(1);
+		@include span-columns(9 of 12);
+		@include shift(1.5);
 		@include media($mobile-break){
 			margin-bottom: 0;
 		}
 	}
 	&.large{
-		@include span-columns(12 of 12);
-		@include shift(0);
+		@include span-columns(11 of 12);
+		@include shift(.5);
 		@include media($mobile-break){
 			margin-bottom: 0;
 		}

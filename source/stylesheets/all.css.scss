@@ -166,47 +166,87 @@ em{
   font-style: normal;
 }
 
-.homepage{
-  //padding-top:66px;
+.portfolio{
+  @include span-columns (10 of 12);
+  @include shift(1);
+  border-top: 2px solid $color-black-100;
+  margin-bottom: $size-6;
+  @include media($tablet-break){
+    @include span-columns(6);
+    @include shift(0);
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @include media($mobile-break){
+    @include span-columns(4);
+    border-top: none;
+  }
+  h1{
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter";
+    font-size: 18px;
+    color: $color-black-100;
+    //padding-left: 5px;
+    margin-top: $size-base;
+    font-weight: 600;
+  }
 }
 
 .about-me{
-  p{
+  padding-top: $size-5;
+  padding-bottom: $size-6;
+  @include span-columns(7.5 of 10);
+  @include shift(2.5);
+  @include media($tablet-break){
+    @include span-columns (5 of 6);
+    @include shift(1);
+  }
+  @include media($mobile-break){
+    @include span-columns (4);
+    @include shift(0);
+    padding-top:$size-3;
+    padding-bottom: $size-small-1;
+
+  }
+
+   p{
     font-family: $second-font-family;
     line-height: 1.6;
     padding-left: 5px;
     font-weight: 300;
-    font-size: 1.9rem;
+    font-size: 29px;
     margin-bottom: $size-1;
     @include media($mobile-break){
       font-size: $size-1;
       margin-top: $size-1;
       margin-bottom: $size-base;
+      padding-left: 0;
+    }
+    &.small-p{
+      font-family: $base-font-family;
+      font-size: 18px;
     }
   }
-  border-top: 31px solid $color-black-100;
-  padding-top: $size-5;
-  @include span-columns(8.5 of 12);
-  @include shift(2.75);
-  @include media($tablet-break){
-    @include span-columns (4 of 6);
-    @include shift(1);
-    padding-right: 1em;
-    padding-left: 1em;
-  }
-  @include media($mobile-break){
-    @include span-columns (4);
-    @include shift(0);
-    border-top: none;
-    padding-top: $size-4;
+
+
+}
+
+.quick-links{
+  padding-left: 5px;
+  li{
+     display: inline;
+     font-size: 18px;
+     //font-family: $second-font-family;
+     font-weight:300;
+     margin-right: $size-base;
 
   }
 }
 
-
-#recent-work-header{
+.case-studies-header{
+  @include row();
+  @include span-columns (10);
   display: inline-block;
-  margin-top: $size-7;
+  margin-bottom: $size-small-2;
   font-weight: 600;
   @include media($mobile-break){
     margin-top: $size-4;
@@ -214,42 +254,16 @@ em{
   .line{
     width: 24px;
     height: 2px;
-    margin-bottom: $size-1;
+    margin-top: $size-small-2;
+    margin-bottom: $size-2;
     background-color: $color-black-100;
   }
 }
 
-.year{
-  display: block;
-  margin-top: $size-base;
-  margin-bottom: $size-3;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: $color-gray-180;
-}
-
-
-
-.portfolio{
-  margin-bottom: $size-6;
-  margin-top: $size-3;
-  //padding-left:10px;
-  //padding-right:10px;
-  @include span-columns(12);
-  @include media($tablet-break){
-    @include span-columns(6);
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  @include media($mobile-break){
-    @include span-columns(4);
-  }
-}
 
 .case-row{
   @include row();
-  @include span-columns (8.5 of 12);
-  @include shift(2.75);
+  @include span-columns (10 of 10);
   display: flex;
   align-items: center;
   margin-bottom: $size-4;
@@ -264,7 +278,7 @@ em{
 
 .case-study{
   opacity: .8;
-  @include span-columns(8 of 8);
+  @include span-columns(5 of 10);
   @include media($tablet-break){
     @include span-columns(12 of 12);
   }
@@ -298,7 +312,7 @@ em{
   }
 
   &.small{
-    height: $size-11;
+    height: $size-10;
     @include media($mobile-break){
       height: $size-9;
     }
