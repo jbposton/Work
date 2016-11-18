@@ -5,7 +5,6 @@ footer{
   padding-top: $size-1;
   padding-bottom: $size-1;
   border-top: 2px solid $color-black-100;
-  text-align: center;
   background-color: white;
   color: $color-black-100;
   @include media($tablet-break){

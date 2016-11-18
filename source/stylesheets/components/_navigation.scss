@@ -5,16 +5,18 @@
 }
 
 header{
+  z-index: 1;
   position: fixed;
-  display: block;
+  background-color: rgba(255, 255, 255, 0.9);
+  left: 0;
+  right: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 1em;
+  padding-right: 1em;
   width: 100%;
-  //padding-top: 20px;
-  //padding-bottom: 20px;
-  max-width: 1280px;
-  margin: 0 auto; 
-  left:0px; 
-  right:0px;
-  top: 0;
+  margin: 0 auto;
+  border-top: 1px solid $color-black-100;
   transition: top $animation-time ease-in-out;
 
   @include media($tablet-break){
@@ -23,111 +25,83 @@ header{
   @include media($mobile-break){
     position: static;
     padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .line{
-    width: 100%;
-    height: 3px;
-    margin-left: -3px;
-    background-color: #C0BEC1;
+    padding-bottom: 15px;
   }
 }
 
 #logo{
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  padding-top: 2px;
-  padding-bottom: .5px;
-  padding-left: 6px;
-  padding-right: 2px;
-  border: 1px solid $color-black-100;
+  @include span-columns (1 of 12);
+  display: inline-block;
+  @include media($mobile-break){
+    @include span-columns(1 of 4);
+  }
 }
-#logo-text {
-    font-family: $base-font-family;
-    font-size: $size-1;
-    display: block;
-    text-align: center;
-    font-weight: 600;
-    color: $color-black-100;
-    margin-bottom: 2px;
-    //border-bottom: 3px solid #C0BEC1;
-    //padding-top: 2px;
-    letter-spacing: 6px;
-    //display: inline-block;
-    &:hover{
-      color: darken(#C0BEC1, 50%);
-    }
+.logo-text{
+  display: inline-block;
+  color: $color-black-100;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 9px;
+  border: 1px solid $color-black-100;
+  &:hover{
+    color: white;
+    background-color: $color-black-100;
+  }
 }
 
 nav{ 
-  @include media($tablet-break){
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  @include media($mobile-break){
-    text-align: left;
-    font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-family: $third-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 5px;
+  @include span-columns(9 of 12);
+  @include shift(1.25);
+  @include media ($mobile-break){
+    @include span-columns(3 of 4);
+    @include shift(0);
   }
 }
 
+.name{
+  margin: 0;
+  display: inline-block;
+  color: $color-black-80;
+  @include media($mobile-break){
+    display: none;
+  }
+}
 nav ul {
-  position:absolute;
-  right:-7%;
-  top: 90px;
   list-style-type: none;
   float:right;
-  margin:0;
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-  transform: rotate(90deg);
-  @include media($mobile-break){
-    -ms-transform: rotate(0deg); /* IE 9 */
-    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-    transform: rotate(0deg);
-    position:static;
-  }
-  }
+  margin: 0;
+}
 
 nav li {
-  font-size: 0.875em;
+  font-size: 14px;
   display: block;
   float:left;
-  font-weight: 400;
-  margin-left: 2em;
-  margin-bottom: $size-small-1;
-  :last-child{
-    margin-left:0;
+  font-weight: 500;
+  margin-right: 2.5em;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $color-black-90;
+  &:last-child{
+    margin-right: 0;
+  }
+  &:hover{
+    border-bottom: 3px solid $color-black-90;
   }
   @include media($mobile-break){
     display: inline-block;
   }
 }
 
-header a {
-  font-family: $base-font-family;
-  display: block;
-  font-size: 14px; 
-  color: #C0BEC1;
-  font-weight: 400;
-  list-style-type: none;
-  text-decoration: none;
-  display: block;
-  letter-spacing: 1px;
-  border-bottom: none;
-  &:active{
-    color: $color-black-100;
-  }
-  &:visited{
-    color: #C0BEC1;
-  }
-  &:hover{
-    color: lighten($color-black-100, 20%);
-    border-bottom: none;
-  }
-}
 
-// we'll add this class using javascript
+//we'll add this class using javascript
 .nav-up {
-  top: -66px; // same as header height. use variables in LESS/SASS
+  top: -79px; // same as header height. use variables in LESS/SASS
 }
