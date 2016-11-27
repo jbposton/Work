@@ -275,6 +275,8 @@ p.description{
 .one-across{
 	@include span-columns(8 of 12);
 	@include shift(2);
+	margin-top: $size-3;
+	margin-bottom: $size-4;
 	@include media ($tablet-break){
 		@include span-columns(6);
 		@include shift(0);
@@ -282,14 +284,32 @@ p.description{
 	@include media($mobile-break){
 		@include span-columns(4);
 		@include shift(0);
-		margin-top: $vertical-space-small-1;
+		margin-top: $size-1;
+		margin-bottom: $size-1;
 	}
+}
+
+.large-across{
+	@include span-columns(11 of 12);
+	@include shift(.5);
+	margin-top: $size-3;
+	margin-bottom: $size-4;
+	@include media ($tablet-break){
+		@include span-columns(6);
+		@include shift(0);
+	}
+	@include media($mobile-break){
+		@include span-columns(4);
+		@include shift(0);
+		margin-top: $size-1;
+		margin-bottom: $size-1;
+	}
+
 }
 
 .inline-img{
 	width: 100%;
-	margin-top: $size-4;
-	margin-bottom: $size-2;
+	margin-bottom: $size-1;
 }
 
 .outputs{

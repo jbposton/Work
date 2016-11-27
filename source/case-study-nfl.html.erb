@@ -32,7 +32,7 @@ title: NFL Sunday Ticket App
 	<div class="brief">
 		<div class="content-grid">
 			<div class="brief-box">
-				<div class="brief-text">DIRECTV approached us to help update and improve the user experinece of their most popular consumer facing app, NFL Sunday Ticket. Originally created as an iPad and Android app, the app gives fans access to all Sunday games alongside realtime statistics, highlights and player information. For the update, we were tasked with improving the usability and UX of the app while also scaling the designs to larger devices as users were requesting the content on these devices more and more. Focusing on the content users cared about the most, we recommended and implemented design updates that scaled across new, larger devices in order to make for a more rich and engaging multi-platform experience.   
+				<div class="brief-text">DIRECTV approached us to help update and improve the user experience of their most popular consumer facing app, NFL Sunday Ticket. Originally created as an iPad and Android app, the app gives fans access to all Sunday games alongside statistics, highlights and player information in real time. For the update, we were tasked with improving the usability and UX of the app while also scaling the designs to larger devices as users were requesting the content on bigger displays. Focusing on the content users cared about the most, I helped develop new features for the app that made for a more rich and engaging multi-platform experience.   
 				</div>
 			</div>
 		</div>
@@ -62,8 +62,8 @@ title: NFL Sunday Ticket App
 				</div>
 			</div>
 		</div>
-		<p class="caption"><em>Improved Multi-tasking</em></p>
-		<p class="caption">Updated the structure and content strategy for the main default of the app in order to increase the app’s usage outside of normally scheduled games along with integrating Fantasy Football informtion.</p>
+		<p class="caption"><em>Improved Multi-tasking and Content Discovery</em></p>
+		<p class="caption">Updated the structure and content strategy for the app with the goal of increasing the app’s usage outside of normally scheduled games.</p>
 	</div>
 	
 
@@ -79,8 +79,8 @@ title: NFL Sunday Ticket App
 					<img src="images/nfl-apple-tv-2.png" rel="gallery-research">
 				</div>
 			</div>
-			<p class="caption"><em>Design for T.V.</em></p>
-			<p class="caption">Translated the exisitng app to Apple T.V. and Roku platforms. Designed and prototyped concepts.</p>
+			<p class="caption"><em>Translating the app for T.V.</em></p>
+			<p class="caption">Translated the exisitng app to Apple T.V. and Roku platforms. Designed and prototyped interactive concepts for the new T.V. experiences.</p>
 		</div>
 	</div>
 	<div class="process">
@@ -89,24 +89,95 @@ title: NFL Sunday Ticket App
 				<div class ="context">
 					<div class="context-info">
 						<h2>Discovering opportunities and constraints</h2>
-						<p class="first-graf">As a part of the updated we wanted to make sure the app and its structure reflected and prioritized the content our users wanted the most. I used analytics reports and reviewed feedback logs as a basis for what needed improving.</p>
-						<p>Additionally, I conducted a Heuristic Evaluation on the original app, hoping to better understand the feedback and identify areas for improvements.  
+						<p class="first-graf">As a goal for the update we wanted to make sure the app and its structure reflected and prioritized the content our users wanted the most.</p>
+						<p> After reviewing analytics reports and user reviews it was clear that most users cared about watching the live feed,  switching between games, and watching highlights. I made improving these tasks my priority for the update.</p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-analytics.png" class="inline-img">
+						<p class="caption inline">Visualized key metrics that drove our priorities: Most users often switched between games and wanted the experience on larger devices.</p>
+					</div>
+					<div class="context-info">
+						<p>Additionally, I conducted a Heuristic Evaluation on the original app, hoping to better understand the feedback and identify opportunities for improvement.  
 						</p>
 					</div>
 					<div class="one-across">
 						<img src="images/nfl-original-1.png" class="inline-img">
-						<p class="caption inline"><em>Original Design - Layout:</em></p>
-						<p class="caption inline">Not yet available on larger devices, the current app experience across all platforms was fixed within a non-responsive layout called the “L-Wrap”, even on the web app.</p>
+						<p class="caption inline"><em>Original Design and the layout painpoint:</em></p>
+						<p class="caption inline">Not yet available on larger devices, the current app experience across all platforms was fixed within a non-responsive layout called the “L-Wrap”--even on the web app. This constrained the live video watching experience when a user wanted to quickly switch between games.</p>
 					</div>
 					<div class="one-across">
 						<img src="images/nfl-original-2.png" class="inline-img">
 						<p class="caption inline"><em>Disorganized</em></p>
-						<p class="caption inline">The UI elements in the game panel did not create a clear connection between the controls and the items being controlled. The Date filter was not directly above the game live games it would filter. This potentially obstructed the users’ ability to find and watch previous games after they have aired.</p>
+						<p class="caption inline">The UI elements in the game panel did not create a clear connection between the controls and the items being controlled. The Date filter was not directly above the objects it controlled. This potentially obstructed the users’ ability to find and watch previous games after they had aired.</p>
+					</div>
+				</div>
+				<div class="context">
+					<div class="context-info">
+						<h2>Small improvements go a long way</h2>
+						<p>After understanding the painpoints within the experience I recommended minor UX changes that addressed our goals for the update. </p>
+						<p>For the game panel I recommended switching the arrangement of the date filter and the currently selected game chip.</p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-game-panel.png" class="inline-img">
+					</div>
+					<div class="context-info">
+						<p>As for the highlight thumbnails, I assumed users would not be able to quickly find a highlight they were interested in considering every thumbnail looked the same: bird's eye view of a rectangle field. To address this issue, I recommended getting access to field-level photography to help distinguish the highlights and engage users more with the content.</p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-highlights.png" class="inline-img">
 					</div>
 				</div>
 				<div class ="context">
 					<div class="context-info">
-						<h2>Sorry this case study is a work in progress. More information on my process to come soon! </h2>
+						<h2>Improving the "L-Wrap" layout</h2>
+						<p> Although the L-wrap layout was useful for tablet users, especially those using the app to multi-task, it wasn't necessarily friendly for desktop or users on larger devices.</p>
+						<p>The fixed-width layout quickly looked small on larger displays but unfortunately our engineers did not have the bandwidth or budget for a full responsive overhaul of the current code structure.</p>
+						<p>Early iterations I sketched and wireframed considered a more adaptive approach, allowing the panels to float above and below the video as the viewport reached larger breakpoints. Unfortunately this proved infeasible from a technical and budget perspective so we returned to the drawing board.</p>
+						<p>Less desired, but technically feasible iterations included scaling just the video panel as the width of the viewport increased. While technically possible, this felt broken and unprofessional.</p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-sketch-1.png" class="inline-img">
+						<p class="caption inline">
+							Initial iteration included one adaptive breakpoint with options for one new layout possibility. 
+						</p>						
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-sketch-2.png" class="inline-img">
+						<p class="caption inline">I sketched and communicated other options that included a scaling video only.</p>
+					</div>
+					<div class="context-info">
+						<h2>Stadium Mode</h2>
+						<p>With both responsive and adaptive solutions off the table, I had to consider a more out-of-the-box approach.</p>
+						<p>Ultimately, I used my knowledge of HTML and CSS and created a solution that leveraged the already responsive nature of video elements on the web.</p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-code.png" class="inline-img">
+						<p class="caption">If you do not specify a width or height, Video elements naturally flex with their container.</p>
+					</div>
+					<div class="context-info">
+						<p>What if, past a certain breakpoint, we threw the live video feed in a new tab without any additional content found in the L-Wrap layout? What if we let the video feed flex naturally with the browser, giving users what they wanted the most: a larger live feed on larger displays with the ability to multi-task.</p>
+						<p>With this in mind, I proposed a new feature that allowed users to change their app view and brought the live video feed, along with the game changer, into a new tab where it could flex naturally with the browser--no extensive code required. We called it <em>"Stadium Mode."</em></p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-whiteboard.png" class="inline-img">
+						<p class="caption">sketched out the idea on a whiteboard for our design team including pros and cons for the solution.</p>
+					</div>
+					<div class="large-across">
+						<img src="images/nfl-stadium-wires.png" class="inline-img">
+						<p class="caption">Further defined the expected behavior using wireframes.</p>
+					</div> 
+					<div class="context-info">
+						<p>After sketching and wireframing out the idea, I wanted to further prove to our engineers the expected behavior of the feature. I quickly made a coded prototype that demonstrated how the video feed, outside of the iframe, could flex in the browser. Although they were hesitant to accept any changes early on, after seeing the coded prototype, they recognized the potential and accepted the feature.</p>
+					</div>
+					<video  controls="" class=" output-item medium no">
+						<source src="images/nfl-coded.mp4" type="video/mp4">
+					</video>
+					<div class="context-info">
+						<p>We also used the coded prototype to conduct preliminary user testing with research participants. After completing a prompt to expand their video, <em>4 out of 5 participants preferred the new video-focused layout.</em></p>
+					</div>
+					<div class="one-across">
+						<img src="images/nfl-stadium-mode.png" class="inline-img">
+						<p class="caption">Final UI of Stadium Mode.</p>
 					</div>
 				</div>
 			</div>
