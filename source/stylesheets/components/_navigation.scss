@@ -1,107 +1,57 @@
-//NAVIGATION
-
-.clear{
-  clear: both;
-}
-
-header{
-  z-index: 1;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
-  left: 0;
-  right: 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  margin: 0 auto;
-  border-top: 1px solid $color-black-100;
-  transition: top $animation-time ease-in-out;
-
-  @include media($tablet-break){
-    padding-left: 1em;
-  }
+nav{
+  @include outer-container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  padding-right: 1rem;
+  padding-left: 1rem;
   @include media($mobile-break){
-    position: static;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding-top:20px;
   }
 }
 
-#logo{
-  @include span-columns (1 of 12);
-  display: inline-block;
-  @include media($mobile-break){
-    @include span-columns(1 of 4);
-  }
-}
-.logo-text{
-  display: inline-block;
-  color: $color-black-100;
-  font-size: 18px;
-  font-weight: 600;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  padding-left: 8px;
-  padding-right: 9px;
-  border: 1px solid $color-black-100;
-  &:hover{
-    color: white;
-    background-color: $color-black-100;
-  }
-}
-
-nav{ 
+.nav-contents{
+  @include span-columns(10 of 12);
+  @include shift(1);
   display: flex;
-  align-items: center;
-  font-family: $third-font-family;
-  font-size: 14px;
-  font-weight: 400;
-  padding-top: 5px;
-  @include span-columns(9 of 12);
-  @include shift(1.25);
-  @include media ($mobile-break){
-    @include span-columns(3 of 4);
+  justify-content: space-between;
+  @include media($mobile-break){
     @include shift(0);
   }
 }
 
-.name{
-  margin: 0;
-  display: inline-block;
-  color: $color-black-80;
-  @include media($mobile-break){
-    display: none;
-  }
-}
-nav ul {
-  list-style-type: none;
-  float:right;
-  margin: 0;
+
+
+.logo{
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-nav li {
+.nav-list{
   font-size: 14px;
-  display: block;
-  float:left;
-  font-weight: 500;
-  margin-right: 2.5em;
-  padding-bottom: 2px;
-  border-bottom: 2px solid $color-black-90;
-  &:last-child{
-    margin-right: 0;
+  @include media($mobile-break){
+    display: flex;
+    align-items: center;
+  }
+
+
+}
+
+.nav-item{
+  font-size: 14px;
+  padding-bottom: 4px;
+  text-transform: lowercase;
+  transition: color $animation-time;
+  &:visited{
+    color:#b9b9b9;
   }
   &:hover{
-    border-bottom: 3px solid $color-black-90;
+    color: #6e6e6e;
   }
   @include media($mobile-break){
-    display: inline-block;
+    display: inline;
+    padding-left: 16px;
   }
-}
-
-
-//we'll add this class using javascript
-.nav-up {
-  top: -79px; // same as header height. use variables in LESS/SASS
 }
