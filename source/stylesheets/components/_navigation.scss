@@ -5,6 +5,9 @@ nav{
   font-size: 16px;
   padding-right: 1rem;
   padding-left: 1rem;
+  @include media($large-break){
+    max-width: 1100px;
+  }
   @include media($mobile-break){
     padding-top:20px;
   }

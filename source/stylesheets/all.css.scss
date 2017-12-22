@@ -69,7 +69,6 @@ body {
   background-color: white;
   color: $primary-font-color;
   border-sizing: border-box;
-  //height: 100%;
 }
 
 .index{
@@ -135,6 +134,9 @@ strong{
 .home{
   @include outer-container();
   height: 100%;
+  @include media($large-break){
+    max-width: 1100px;
+  }
 }
 
 em{
@@ -160,10 +162,13 @@ em{
 }
 
 .intro-description{
-  font-size: 80px;
+  font-size: 100px;
   max-width: 900px;
   font-weight: 600;
   font-family: $second-font;
+  @include media ($large-break){
+    font-size: 80px;
+  }
   @include media($tablet-break){
     font-size: 60px;
   }
@@ -233,7 +238,7 @@ em{
   position: relative;
   overflow: hidden;
   @include media($mobile-break){
-    margin-bottom: 10px;
+    margin-bottom: 70px;
     max-height: 360px;
   }
   img{
@@ -287,7 +292,7 @@ em{
 .top-item{
   margin-bottom: 10%;
   @include media($mobile-break){
-    margin-bottom: 10px;
+    margin-bottom: 70px;
   }
 }
 
@@ -298,6 +303,7 @@ em{
   font-size: 25px;
   margin: 0;
   color: white;
+  text-align: center;
   opacity: 0;
   position: absolute;
   transition: opacity $animation-time;
@@ -306,12 +312,19 @@ em{
   margin-right: -50%;
   transform: translate(-50%, -50%); 
   @include media ($mobile-break){
-    top: 90%;
-    left: 10px;
-    transform: translate(0, 0);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 20px;
+    margin: 0;
+    transform: translate(0%, 45%);
     opacity: 1;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
+    background-color: white;
 
   }
 
@@ -321,13 +334,16 @@ h4{
   font-size: 25px;
   font-family: $base-font;
   margin:0;
-  text-align: center;
+  font-weight: 600;
+  @include media ($mobile-break){
+    font-size: 16px;
+  }
 }
 
 .proj-meta{
   font-family: $base-font;
   font-size: 16px;
-  text-align: center;
+  //text-align: center;
   margin-top: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
