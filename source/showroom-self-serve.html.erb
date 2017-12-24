@@ -25,12 +25,12 @@ title: Curalate Self-Serve — Justin Poston
 	
 	<div class="article">
 		<div class="section">
-			<p class="extra-space">As a marketing technology company, Curalate helps brands create online experiences that market their products and engage consumers, specifically products that connected to social media. As one of my first projects, I worked with a small team to build out functionality for brands to create a new marketing tool, <a class="text-link" href="showroom.html">Showroom</a> on the Curalate platform. A Showroom was a dynamic landing page that could link to any social media post created by Curalate's brand partners.</p>
-			<p>As the Product Design Owner, I worked on developing our initial MVP and the subsequent four iterations. I worked with a Product Manger and Lead Developer within a tight 2-3 week timeline for each new iteration, gathering useful user feedback along the way.</p>
+			<p class="extra-space">As a marketing platform, Curalate helps brands create online experiences that market their products and engage consumers, specifically on social media. As one of my first projects at Curalate, I worked with a small, interdisciplinary team to build out functionality for brands to create a new marketing tool called, <a class="text-link" href="showroom.html">Showroom</a>. A Showroom was a dynamic landing page that could link to any social media post created by a Curalate user.</p>
+			<p>As the Product Design Owner, I designed the initial MVP and the subsequent four iterations. I worked with a Product Manger and Lead Developer within tight 2-3 week sprints for each iteration, gathering useful user feedback along the way.</p>
 		</div>
 		<div class="section">
 			<h1>Understanding our users.</h1>	
-			<p>Understanding our user's needs and behaviors was an iterative process. Given the tight deadline, we made some informed assumptions about the our users and used each live iteration to gather feedback and validate those assumptions.</p>
+			<p>Understanding our user's needs and behaviors was an iterative process. Given the tight deadline, we made some informed assumptions about our users and gathered feedback to test and validate those assumptions after each iteration.</p>
 			<p>Using various job descriptions and coordinating a small workshop with Customer Solutions Managers, I sketched out a proto-persona our team used to talk about initial MVP requirements for the feature.</p>
 			<div class="image-wrapper"><img src="images/self-serve-persona.png"></div>	
 			<p class="extra-space">From there, I worked with my product team to flesh out the initial requirements for the MVP.</p>
@@ -39,12 +39,12 @@ title: Curalate Self-Serve — Justin Poston
 
 		<div class="section">
 			<h1>Constraints.</h1>
-			<p>Given the short timeline, there were a number of constraints we had to deal with in regards to the initial design. The product initially started out as "What You See Is What You Get" interface, but we quickly had to scale back due to development complexity and time constraints. Working closely with our development team, we mapped out initial constraints early on. </p>
+			<p>Given the short timeline, there were a number of constraints we had to deal with in regards to the initial design. The product initially started out as "What You See Is What You Get" interface, but we quickly had to scale back due to development complexity and time constraints. Working closely with our development team, I mapped out initial constraints early on. </p>
 			<ul class="list-block">
-				<li class="list-item"><em>No new modules.</em> </br>Given the time constraint, we were not able to create a new module for the workflow. Since each Showroom was based on an image within our platform, we decided to put the home for the new workflow inside the existing Media Actions Module.</li>
+				<li class="list-item"><em>Leverage existing workflows.</em> </br>For the first iteration, we were not able to create a completely new worfklow for the feature. Since each Showroom was based on an image within our platform, we decided to put the home for the new workflow inside the existing Media Actions Module.</li>
 			</ul>
 			<ul class="list-block">
-				<li class="list-item"><em>Preview instead of  Emulator</em> </br> We decided early on that previewing your Showroom was key for our users, however, creating a live wysiwyg was just not in scope for the initial release. Given this constraint, we decided to build our own Preview emulator, as a seperate section of the workflow.</li>
+				<li class="list-item"><em>Preview instead of  Emulator</em> </br> We decided early on that previewing your Showroom was a key requirement for our users. However, creating a live wysiwyg was just not in scope for the initial release. Given the limitation, we decided to build our own Preview state, as a seperate section of the workflow.</li>
 			</ul>
 		</div>
 
@@ -52,7 +52,7 @@ title: Curalate Self-Serve — Justin Poston
 			<h1>MVP design.</h1>
 			<p>A key design challenge was deciding what aspects of the workflow were optional and what were required given our users desire to control the experience.</p>
 			<p>For the initial launch, we assumed users would prioritized their own time over customizing the default Showroom experience. 
-			<p>Given this decision, I prioritized the link above all other settings and created smart defaults that would work for most users. We assumed this would allow users to&mdash;without much thought&mdash;use our default settings, grab the link, and go.</p>
+			<p>Given this decision, I prioritized the link above all other settings and created smart defaults that would work for most users. We assumed this would allow users to&mdash;without much effort&mdash;use our default settings, grab the link, and go.</p>
 			<p>A combination of role playing and paper mocks help me iterate over the architecture for the page&mdash;defining the overall priority for each step of the process.</p>
 			<p>I then moved on to higher fidelity mocks in Sketch using our pattern libary.</p>
 			<div class="image-wrapper"><img src="images/self-serve-sketch.png"></div>
@@ -67,7 +67,7 @@ title: Curalate Self-Serve — Justin Poston
 				<li class="list-item">Clients were using the same Showroom link across many social channels</li>
 				<li class="list-item">Most clients wanted to track the performance of their Showroom experience using tracking parementers. Currently our tracking paremeter settings were too hidden.</li>
 				<li class="list-item">Most clients wanted to track the same Showroom experience across multiple social media channels.</li>
-				<li class="list-item">Clients wanted to curate their own content for their Showroom landing pages.</li>
+				<li class="list-item">Clients wanted to curate their own content for their Showroom landing pages. Currently we programatically generated content, thinking it was an easier workflow for users.</li>
 			</ul>
 			<h2>Adding more robust campaign tracking.</h2>
 			<p>For are second iteration we quickly responded to the tracking needs of our users.</p>
@@ -75,7 +75,7 @@ title: Curalate Self-Serve — Justin Poston
 			<p>In the second iteration, I surfaced the Source tracking parementer out of the settings for each new additional link. I also added the ability to create multiple links with new sources.</p>
 			<div class="image-wrapper"><img src="images/self-serve-tracking-ui.png"></div>
 			<h2 class="extra-space">Allowing users to curate their own content.</h2>
-			<p>While auto-generating recommended content was a time-saver, it didn't give our users enough control over their branded content. We learned early on after our MVP launch that brands sometimes had specific and unique guidelines for campaign content that was hard to automate. For the second iteration I designed an additional workflow to override our recommendations with our brand's own selections.</p>
+			<p>While auto-generating recommended content was a time-saver, it didn't give our users enough control over their branded content. After our MVP launch, we learned that brands sometimes had specific and unique guidelines for campaign content that was hard to automate. For the second iteration I designed an additional workflow to override our recommendations with our brand's own selections.</p>
 			<p>For the new setting, I focused on making the choice between our recommendations and their own as clear and obvious as possible.
 			<div class="image-wrapper"><img src="images/self-serve-curation-flow.png"></div>
 			<p class="extra-space">After presenting and gaining buy-in on the workflow, I translated the flow into high fidelity design.</p> 
@@ -114,7 +114,7 @@ title: Curalate Self-Serve — Justin Poston
 						<a href="mailto:justin.postonb@gmail.com" class="footer-p text-link">E-mail</a> 
 					</li> 
 					<li>
-						<a href="www.linkedin.com/in/justinbposton" target="_blank" class="footer-p text-link">LinkedIn</a>
+						<a href="http://www.linkedin.com/in/justinbposton" target="_blank" class="footer-p text-link">LinkedIn</a>
 					</li>
 					<li>
 						<a href="documents/Justin-Poston_Product-Designer.pdf" class="footer-p text-link">Resume</a>
@@ -125,4 +125,3 @@ title: Curalate Self-Serve — Justin Poston
 			<p class="last">✨ Designed and developed by Justin Poston - 2017. </p>
 		</div>
 	</footer>
-
