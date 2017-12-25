@@ -162,12 +162,12 @@ em{
 }
 
 .intro-description{
-  font-size: 100px;
+  font-size: 90px;
   max-width: 900px;
   font-weight: 600;
   font-family: $second-font;
   @include media ($large-break){
-    font-size: 80px;
+    font-size: 90px;
   }
   @include media($tablet-break){
     font-size: 60px;
@@ -179,7 +179,7 @@ em{
 }
 
 .name-text{
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   font-family: $base-font;
   line-height: 1.4;
   color:#434343;
